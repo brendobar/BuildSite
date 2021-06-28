@@ -1,0 +1,86 @@
+$orange: #ff4200;
+$gray: #b3b3b3;
+$disable: #737373;
+
+.Header{
+    color: white;
+    padding: 2vw;
+    display: grid;
+    grid-template-rows: 15vh 55vh 30vh;
+    font-weight: 700;
+
+    .Nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .logo{
+            filter: brightness(0) invert(1);
+            width: 6em;
+            padding: 1vw;
+        }
+        .menu{
+            font-size: 2em;
+        }
+    }
+
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .Pagination{
+            li{
+                &.activePage::before{
+                    background-color:white;
+                }
+                &.activePage::after{
+                    background-color: white;
+                }
+            }
+        }
+
+        .Slider{
+            margin: 7vw 0;
+            .description{
+                font-size: 1.5em;
+                color: $gray;
+                letter-spacing: .2em;
+                margin-bottom: 1.5em;
+            }
+            .read-more{
+                font-size: 1em;
+                width: 10vw;
+                border-top: 4px solid $orange;
+                padding: 1em 0;
+            }
+        }
+    
+        .SocialNetwork{
+            display: grid;
+            float: right;
+            margin: auto 0;
+            font-size: 1.2em;
+            a{
+                padding: 1em 0;
+            }
+        }
+    }
+    
+    .ScrollDown{
+        display: grid;      
+        grid-template-rows: 10vh 10vh;
+        img{
+            width: 5em;
+            margin: -1vh auto;
+        }
+        p{
+            color: $disable;
+             transform: rotate(90deg);
+             margin: auto;
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,59 @@
+$orange: #ff4200;
+$gray: #b3b3b3;
+$disable: #737373;
+
+.Services{
+
+    color: white;
+    padding: 2vw;
+    display: grid;
+    grid-template-rows: 85vh 15vh;
+    grid-template-columns: 15vw 40vw 45vw;
+    font-weight: 700;
+    .Pagination{
+        li{
+            &.activePage::before{
+                background-color:white;
+            }
+            &.activePage::after{
+                background-color: white;
+            }
+        }
+    }
+
+    .TextArea{
+        margin: 20vh 0 0 5vw;
+        .name{
+            padding: 2vh 0;
+            border-bottom: 2px solid $orange;
+            margin-bottom: 15vh;
+            width: 20vw;
+            font-size: 3em;    
+        }
+    }
+
+    .Description{
+        position: relative;
+        top: 80%;
+        color:$gray;
+        height: 30%;
+        .description-name{
+            font-size: 1.5em;
+            margin-bottom: 3vh;
+            span{
+                color: $orange;
+                font-size: 5em;
+                opacity: 20%;
+                z-index: 0;
+                position: absolute;
+                top: -7vh;
+                left: -2vw;
+            }
+        }
+        .text{
+            font-size: 1em;
+            font-weight: 200;
+            width: 25vw;
+        }
+    }
+}

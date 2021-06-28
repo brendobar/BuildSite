@@ -1,0 +1,102 @@
+$orange: #ff4200;
+$gray: #b3b3b3;
+$disable: #737373;
+$ph-1: url('../static/projects/proj-1.jpg');
+$ph-2: url('../static/projects/proj-2.jpg');
+$ph-3: url('../static/projects/proj-3.jpg');
+
+.Portfolio{
+
+    color: white;
+    padding: 2vw;
+    display: grid;
+    grid-template-rows: 85vh 15vh;
+    grid-template-columns: 15vw 40vw 45vw;
+    font-weight: 700;
+    .Pagination{
+        li{
+            &.activePage::before{
+                background-color:white;
+            }
+            &.activePage::after{
+                background-color: white;
+            }
+        }
+    }
+
+
+    .TextArea{
+        margin: 12vh 0 0 2vw;
+        .name{
+            padding: 2vh 0;
+            border-bottom: 2px solid $orange;
+            margin-bottom: 10vh;
+            width: 25vw;
+            font-size: 3em;    
+        }
+        .projects{
+            display: flex;
+            align-items: flex-start;
+            *{
+                padding: 0 .5vw;
+                flex: 1 1 auto;
+            }
+            img{
+                object-fit: scale-down;
+            }
+            .ph-1{
+                align-self: center;
+            }
+            .ph-2{
+                max-width: fit-content;
+            }
+            .ph-3{
+                align-self:flex-end;
+            }
+            .project-name, .project-text, a{
+                text-align: center;
+                line-height: 1.5vw;
+                display: block;
+                
+            }
+            .project-name{
+                margin-top: 2vw;
+            }
+            .project-text{
+                font-weight: 200;
+                color: $gray;
+                font-size: 1em;
+                margin-top: 1vw;
+            }
+            a{
+                margin-top: 2.5vw;
+            }
+            a::after{
+                font-family: "Font Awesome 5 Free";
+                content: '\f0c1';
+                color: $orange;
+                font-size: 1.5vw;
+                background-color: white;
+                border-radius: 10vw;
+                padding: 1vw;   
+                
+            }
+        }
+        .services-list{
+            display: grid;
+            grid-template-rows: repeat(3, 5vh);
+            a{
+                color: $disable;
+                font-size: 1.5vw;
+                letter-spacing: .2em;
+                &:hover{
+                    color: $gray;
+                }
+            }
+        }
+    }
+
+    .Description{
+        margin: auto;
+    }
+}

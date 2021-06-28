@@ -1,0 +1,44 @@
+$disable: #e6e6e6;
+$gray: #b3b3b3;
+
+.About{
+    padding: 2vw;
+    display: grid;
+    grid-template-rows: 85vh 15vh;
+    grid-template-columns: 15vw 85vw;
+    color: #333333;
+    font-weight: 700;
+    .Pagination{
+        
+        li{
+            &.activePage::before{
+                background-color:#333333;
+            }
+            &.activePage::after{
+                background-color: #333333;
+            }
+        }
+    }
+
+    .TextArea{
+        margin: auto 0;
+        padding: 5em 0;
+        .name{
+            padding: 0 2em 3em;
+        }
+        .text{
+            font-size: 1em;
+            color: $gray;
+            width: 35vw;
+            font-weight: 200;
+            &::before{
+                display: block;
+                content: '';
+                width: 25vw;
+                height: 2px;
+                background-color: $disable;
+                margin-bottom: 2vw;
+            }
+        }
+    }
+}
